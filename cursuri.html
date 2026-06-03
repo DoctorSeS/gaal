@@ -1,129 +1,212 @@
 <!DOCTYPE html>
-<html lang="ro" data-theme="light">
+<html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cursuri — Gaal Hairplay</title>
-  <meta name="description" content="Cursuri profesionale de coafură — Gaal Hairplay București. Curs intensiv de permanent 1:1.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/main.css">
-  <link rel="icon" type="image/png" href="static/img/logo_pure.png">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <div id="bg" aria-hidden="true"></div>
-  <header class="nav" id="navbar">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><img src="static/img/logo.png" id="logo" alt="Gaal Hairplay"></a>
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html" data-ro="Acasă" data-en="Home">Acasă</a>
-        <a href="salon.html" data-ro="Salon" data-en="Salon">Salon</a>
-        <a href="cursuri.html" class="active" data-ro="Cursuri" data-en="Courses">Cursuri</a>
-        <a href="https://gaalgabriela.ro" target="_blank" data-ro="Produse" data-en="Products">Produse</a>
-        <a href="contact.html" data-ro="Contact" data-en="Contact">Contact</a>
-        <a href="contact.html" class="nav-book" data-ro="Apelează" data-en="Call us">Apelează</a>
-        <button class="nav-lang" id="langToggle">EN</button>
-        <button class="theme-toggle" id="themeToggle">◑</button>
-      </nav>
-      <button class="nav-burger" id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <span><i class="fas fa-clock" style="color:var(--gold);margin-right:6px"></i><span data-ro="L–V: 10:00 – 18:00" data-en="Mon–Fri: 10:00 – 18:00">L–V: 10:00 – 18:00</span></span>
+      <span class="topbar-sep"></span>
+      <span><i class="fas fa-map-marker-alt" style="color:var(--gold);margin-right:6px"></i>Strada Docenților 22, București</span>
     </div>
-  </header>
-  <main>
-    <section class="page-hero">
-      <div class="page-hero-bg"><img src="static/img/stock-cursuri.jpg" alt="Cursuri"></div>
-      <div class="page-hero-content">
-        <span class="label" data-ro="Formare profesională" data-en="Professional training">Formare profesională</span>
-        <h1 data-ro="Cursuri" data-en="Courses">Cursuri</h1>
-        <div class="gold-bar"></div>
-        <p data-ro="Training individual 1:1 — nu în grupe." data-en="Individual 1:1 training — not in groups.">Training individual 1:1 — nu în grupe.</p>
-      </div>
-    </section>
-    <section class="curs-section">
-      <div class="section-inner">
-        <div class="curs-card fade-up">
-          <div class="curs-card-top">
-            <div class="curs-card-img curtain-wrap">
-              <div class="curtain"></div>
-              <div id="yt-player"></div>
-            </div>
-            <div class="curs-card-info">
-              <span class="label" data-ro="Curs intensiv" data-en="Intensive course">Curs intensiv</span>
-              <h2 data-ro="Permanent – 1 Zi ✨" data-en="Perm – 1 Day ✨">Permanent – 1 Zi ✨</h2>
-              <div class="curs-price-block">
-                <div class="curs-price-main">3500 <span data-ro="lei" data-en="lei">lei</span></div>
-                <div class="curs-price-deposit" data-ro="Avans 1000 lei" data-en="1000 lei deposit">Avans 1000 lei</div>
-              </div>
-              <div class="curs-badges">
-                <span class="badge" data-ro="Produse incluse" data-en="Products included">Produse incluse</span>
-                <span class="badge" data-ro="Model inclus" data-en="Model included">Model inclus</span>
-                <span class="badge">Format 1:1</span>
-                <span class="badge" data-ro="Diplomă inclusă" data-en="Certificate included">Diplomă inclusă</span>
-              </div>
-              <div class="curs-actions" style="padding:0; border:none; margin-top:auto;">
-                <a href="https://wa.me/40741593127?text=Buna%2C%20vreau%20informatii%20despre%20cursul%20de%20permanent" target="_blank" class="btn-gold" data-ro="WhatsApp" data-en="WhatsApp">WhatsApp</a>
-                <a href="https://www.youtube.com/watch?v=tw6eaFcITAQ&list=PLo4zeGtSbGL8oZeQsD4QNKvAEx9o8CtHh&index=1" target="_blank" class="btn-outline">Playlist YouTube</a>
-              </div>
-            </div>
+    <div class="topbar-right">
+      <a href="mailto:office@gaalhairplay.ro"><i class="fas fa-envelope" style="margin-right:5px"></i>office@gaalhairplay.ro</a>
+      <span class="topbar-sep"></span>
+      <a href="https://www.instagram.com/beauty_designers_gaalhairplay" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@gaalhairplaysalon" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-main">Gaal Hairplay</span>
+      <span class="logo-sub">Premium Hair Salon</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" data-ro="Acasă" data-en="Home">Acasă</a>
+      <a href="salon.html" data-ro="Salon" data-en="Salon">Salon</a>
+      <a href="cursuri.html" class="active" data-ro="Cursuri" data-en="Courses">Cursuri</a>
+      <a href="produse.html" data-ro="Produse" data-en="Products">Produse</a>
+      <a href="contact.html" data-ro="Contact" data-en="Contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <span class="lang-toggle"><span class="lang-ro active">RO</span> / <span class="lang-en">EN</span></span>
+      <a href="contact.html" class="btn btn-gold nav-cta" data-ro="Programare" data-en="Book Now">Programare</a>
+      <div class="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-nav">
+  <a href="index.html" data-ro="Acasă" data-en="Home">Acasă</a>
+  <a href="salon.html" data-ro="Salon" data-en="Salon">Salon</a>
+  <a href="cursuri.html" data-ro="Cursuri" data-en="Courses">Cursuri</a>
+  <a href="produse.html" data-ro="Produse" data-en="Products">Produse</a>
+  <a href="contact.html" data-ro="Contact" data-en="Contact">Contact</a>
+  <a href="contact.html" class="btn btn-gold" data-ro="Programare" data-en="Book Now">Programare</a>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="ph-bg" style="background:radial-gradient(ellipse at 50% 60%, #1f1530 0%, #0c0b0a 70%)"></div>
+  <div class="ph-overlay"></div>
+  <div class="ph-content">
+    <div class="ph-label" data-ro="Gaal Hairplay" data-en="Gaal Hairplay">Gaal Hairplay</div>
+    <h1 class="ph-title" data-ro="Cursuri de Specialitate" data-en="Specialist Courses">Cursuri de Specialitate</h1>
+  </div>
+</div>
+
+<!-- COURSE BODY -->
+<section class="cursuri-body">
+  <div class="container">
+    <div class="cursuri-grid">
+
+      <!-- LEFT: content -->
+      <div class="fade-up">
+        <span class="section-label" data-ro="Curs disponibil" data-en="Available course">Curs disponibil</span>
+        <h2 class="section-title" data-ro="Curs Intensiv Permanent" data-en="Intensive Perm Course">Curs Intensiv Permanent</h2>
+        <p class="about-text" data-ro="Vrei să stăpânești tehnica permanentului la cel mai înalt nivel? Gaal Gabriela oferă un curs intensiv 1 la 1, conceput special pentru coafeze care doresc să adauge permanentul în portofoliul lor de servicii sau să-și perfecționeze tehnica existentă." data-en="Want to master the perm technique at the highest level? Gaal Gabriela offers an intensive 1-on-1 course designed specifically for hairdressers who want to add perming to their service portfolio or refine their existing technique.">
+          Vrei să stăpânești tehnica permanentului la cel mai înalt nivel? Gaal Gabriela oferă un curs intensiv 1 la 1, conceput special pentru coafeze care doresc să adauge permanentul în portofoliul lor de servicii sau să-și perfecționeze tehnica existentă.
+        </p>
+
+        <!-- Price box -->
+        <div class="cursuri-price-box">
+          <div class="cursuri-price-main">3.500 lei</div>
+          <div class="cursuri-price-note" data-ro="Avans pentru rezervare: 1.000 lei" data-en="Deposit to reserve: 1,000 lei">Avans pentru rezervare: 1.000 lei</div>
+          <div style="margin-top:16px;font-size:12px;color:rgba(232,221,208,0.35);font-style:italic" data-ro="Restul se achită în ziua cursului." data-en="Remainder is paid on the day of the course.">Restul se achită în ziua cursului.</div>
+        </div>
+
+        <!-- Details grid -->
+        <div class="cursuri-details-grid">
+          <div class="cursuri-detail">
+            <div class="cursuri-detail-lbl" data-ro="Format" data-en="Format">Format</div>
+            <div class="cursuri-detail-val" data-ro="1 la 1 (individual)" data-en="1 to 1 (individual)">1 la 1 (individual)</div>
           </div>
-          <div class="curs-body">
-            <div class="curs-col">
-              <h3 data-ro="Ce vei învăța" data-en="What you'll learn">Ce vei învăța</h3>
-              <ul class="curs-list">
-                <li data-ro="Teorie aplicată: tipologii de păr, soluții profesionale, recomandări și contraindicații" data-en="Applied theory: hair types, professional solutions, recommendations and contraindications">Teorie aplicată: tipologii de păr, soluții profesionale, recomandări și contraindicații</li>
-                <li data-ro="Practică completă pe model real: montarea corectă a bigudiurilor și realizarea procedurii pas cu pas" data-en="Full practice on a real model: correct rod placement and the procedure step by step">Practică completă pe model real: montarea corectă a bigudiurilor și realizarea procedurii pas cu pas</li>
-                <li data-ro="Îngrijire și întreținere după permanent, pentru rezultate impecabile și de durată" data-en="Post-perm care and maintenance for flawless, long-lasting results">Îngrijire și întreținere după permanent, pentru rezultate impecabile și de durată</li>
-              </ul>
-            </div>
-            <div class="curs-col">
-              <h3 data-ro="Detalii" data-en="Details">Detalii</h3>
-              <ul class="curs-list">
-                <li data-ro="Durată: 1 zi (lucrăm până la finalizarea completă a lucrării)" data-en="Duration: 1 day (we work until the procedure is fully complete)">Durată: 1 zi (lucrăm până la finalizarea completă a lucrării)</li>
-                <li data-ro="Focus pe practică, nu pe teorie prelungită" data-en="Focus on practice, not extended theory">Focus pe practică, nu pe teorie prelungită</li>
-                <li data-ro="Produse și cap de păpușă asigurate — fără costuri suplimentare" data-en="Products and mannequin head provided — no extra costs">Produse și cap de păpușă asigurate — fără costuri suplimentare</li>
-                <li data-ro="Format 1:1 — toată atenția exclusiv pe tine" data-en="1:1 format — all attention exclusively on you">Format 1:1 — toată atenția exclusiv pe tine</li>
-              </ul>
-            </div>
-            <div class="curs-col">
-              <h3 data-ro="Beneficii" data-en="Benefits">Beneficii</h3>
-              <ul class="curs-list">
-                <li data-ro="Diplomă de participare la finalul cursului" data-en="Certificate of participation at the end of the course">Diplomă de participare la finalul cursului</li>
-                <li data-ro="Consultanță gratuită pe viitor în utilizarea produselor și tehnicilor" data-en="Free future consultancy on product use and techniques">Consultanță gratuită pe viitor în utilizarea produselor și tehnicilor</li>
-                <li data-ro="Experiență practică reală sub îndrumare directă și personalizată" data-en="Real hands-on experience under direct, personalized guidance">Experiență practică reală sub îndrumare directă și personalizată</li>
-              </ul>
-            </div>
+          <div class="cursuri-detail">
+            <div class="cursuri-detail-lbl" data-ro="Durată" data-en="Duration">Durată</div>
+            <div class="cursuri-detail-val" data-ro="1 zi intensivă" data-en="1 intensive day">1 zi intensivă</div>
+          </div>
+          <div class="cursuri-detail">
+            <div class="cursuri-detail-lbl" data-ro="Locație" data-en="Location">Locație</div>
+            <div class="cursuri-detail-val" data-ro="Salonul Gaal Hairplay" data-en="Gaal Hairplay Salon">Salonul Gaal Hairplay</div>
+          </div>
+          <div class="cursuri-detail">
+            <div class="cursuri-detail-lbl" data-ro="Nivel" data-en="Level">Nivel</div>
+            <div class="cursuri-detail-val" data-ro="Orice nivel" data-en="Any level">Orice nivel</div>
           </div>
         </div>
+
+        <!-- What you learn -->
+        <div style="margin-top:36px">
+          <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px" data-ro="Ce vei învăța" data-en="What you will learn">Ce vei învăța</div>
+          <div class="cursuri-features">
+            <div class="cursuri-feature"><div class="cursuri-feature-dot"></div><span data-ro="Tehnica completă a permanentului de la zero" data-en="Complete perm technique from start to finish">Tehnica completă a permanentului de la zero</span></div>
+            <div class="cursuri-feature"><div class="cursuri-feature-dot"></div><span data-ro="Selectarea produselor potrivite pentru fiecare tip de păr" data-en="Selecting the right products for each hair type">Selectarea produselor potrivite pentru fiecare tip de păr</span></div>
+            <div class="cursuri-feature"><div class="cursuri-feature-dot"></div><span data-ro="Tehnici de înfășurare pentru diferite stiluri de bucle" data-en="Wrapping techniques for different curl styles">Tehnici de înfășurare pentru diferite stiluri de bucle</span></div>
+            <div class="cursuri-feature"><div class="cursuri-feature-dot"></div><span data-ro="Timpii de procesare și neutralizarea corectă" data-en="Processing times and correct neutralisation">Timpii de procesare și neutralizarea corectă</span></div>
+            <div class="cursuri-feature"><div class="cursuri-feature-dot"></div><span data-ro="Sfaturi pentru îngrijirea post-tratament" data-en="Post-treatment care tips for clients">Sfaturi pentru îngrijirea post-tratament</span></div>
+            <div class="cursuri-feature"><div class="cursuri-feature-dot"></div><span data-ro="Practică directă pe model real" data-en="Hands-on practice on a real model">Practică directă pe model real</span></div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="cursuri-actions">
+          <a href="https://wa.me/40000000000?text=Buna%20ziua%2C%20sunt%20interesata%20de%20cursul%20de%20permanent." target="_blank" class="btn btn-whatsapp">
+            <i class="fab fa-whatsapp"></i>
+            <span data-ro="Înscrie-te pe WhatsApp" data-en="Enrol via WhatsApp">Înscrie-te pe WhatsApp</span>
+          </a>
+          <a href="tel:+40000000000" class="btn btn-outline">
+            <i class="fas fa-phone"></i>
+            <span data-ro="Sună pentru detalii" data-en="Call for details">Sună pentru detalii</span>
+          </a>
+          <a href="https://www.youtube.com/@gaalhairplay" target="_blank" class="btn btn-outline">
+            <i class="fab fa-youtube"></i>
+            <span data-ro="Vezi exemple pe YouTube" data-en="See examples on YouTube">Vezi exemple pe YouTube</span>
+          </a>
+        </div>
+
+        <p style="font-size:12px;color:rgba(232,221,208,0.35);margin-top:20px;line-height:1.6;font-style:italic" data-ro="Locurile sunt limitate datorită formatului individual. Avansul se plătește pentru a confirma data selectată." data-en="Places are limited due to the individual format. The deposit is paid to confirm the selected date.">
+          Locurile sunt limitate datorită formatului individual. Avansul se plătește pentru a confirma data selectată.
+        </p>
       </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="static/img/logo.png" id="logo-footer" alt="Gaal Hairplay" style="height:36px;width:auto;">
-        <p style="font-size:.75rem;color:var(--dim);margin-top:.5rem;">Strada Docenților 22, București</p>
+
+      <!-- RIGHT: image -->
+      <div class="cursuri-img-wrap fade-up delay-2">
+        <div class="cursuri-img" style="background:linear-gradient(150deg, #1f1530 0%, #0c0b0a 100%)"></div>
+        <div style="margin-top:24px;padding:28px;background:var(--black-mid);border:1px solid var(--gold-dim)">
+          <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px" data-ro="Instructor" data-en="Instructor">Instructor</div>
+          <div style="font-family:var(--font-serif);font-size:1.4rem;color:var(--cream);margin-bottom:4px">Gaal Gabriela</div>
+          <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px" data-ro="Fondator & Coafor Senior" data-en="Founder & Senior Stylist">Fondator & Coafor Senior</div>
+          <p style="font-size:13px;color:var(--cream-dim);line-height:1.7" data-ro="Cu peste 10 ani de experiență în coafură de lux și sute de clienți mulțumiți, Gabriela transmite cunoștințele sale în sesiuni intensive personalizate." data-en="With over 10 years of luxury hairdressing experience and hundreds of satisfied clients, Gabriela shares her knowledge in personalised intensive sessions.">
+            Cu peste 10 ani de experiență în coafură de lux și sute de clienți mulțumiți, Gabriela transmite cunoștințele sale în sesiuni intensive personalizate.
+          </p>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="index.html" data-ro="Acasă" data-en="Home">Acasă</a>
-        <a href="salon.html" data-ro="Salon" data-en="Salon">Salon</a>
-        <a href="cursuri.html" data-ro="Cursuri" data-en="Courses">Cursuri</a>
-        <a href="https://gaalgabriela.ro" target="_blank" data-ro="Produse" data-en="Products">Produse</a>
-        <a href="contact.html" data-ro="Contact" data-en="Contact">Contact</a>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-main">Gaal Hairplay</div>
+        <div class="footer-logo-sub">Premium Hair Salon</div>
+        <p class="footer-tagline" data-ro="Arta coafurii în centrul Bucureștiului." data-en="The art of hairdressing in the heart of Bucharest.">Arta coafurii în centrul Bucureștiului.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/beauty_designers_gaalhairplay" target="_blank" class="f-soc"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@gaalhairplaysalon" target="_blank" class="f-soc"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.youtube.com/@gaalhairplay" target="_blank" class="f-soc"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.facebook.com/gaalhair" target="_blank" class="f-soc"><i class="fab fa-facebook-f"></i></a>
+        </div>
       </div>
-      <div class="footer-contact">
-        <a href="tel:+40741593127">+40 741 593 127</a>
-        <a href="mailto:office@gaalhairplay.ro">office@gaalhairplay.ro</a>
-        <a href="https://www.facebook.com/gaalhair/" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/beauty_designers_gaalhairplay/" target="_blank">Instagram</a>
-        <a href="https://www.youtube.com/@gaal_hairplay" target="_blank">YouTube</a>
+      <div>
+        <div class="footer-col-title" data-ro="Navigare" data-en="Navigate">Navigare</div>
+        <div class="footer-links">
+          <a href="index.html" data-ro="Acasă" data-en="Home">Acasă</a>
+          <a href="salon.html" data-ro="Salon" data-en="Salon">Salon</a>
+          <a href="cursuri.html" data-ro="Cursuri" data-en="Courses">Cursuri</a>
+          <a href="produse.html" data-ro="Produse" data-en="Products">Produse</a>
+          <a href="contact.html" data-ro="Contact" data-en="Contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title" data-ro="Servicii" data-en="Services">Servicii</div>
+        <div class="footer-links">
+          <a href="salon.html#services" data-ro="Extensii Crochet" data-en="Crochet Extensions">Extensii Crochet</a>
+          <a href="salon.html#services" data-ro="Permanent" data-en="Perm">Permanent</a>
+          <a href="salon.html#services" data-ro="Vopsit" data-en="Colouring">Vopsit</a>
+          <a href="salon.html#services" data-ro="Keratina" data-en="Keratin">Keratina</a>
+          <a href="salon.html#services" data-ro="Nanoplastie" data-en="Nanoplasty">Nanoplastie</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title" data-ro="Contact" data-en="Contact">Contact</div>
+        <div class="footer-contact-list">
+          <div class="f-contact-item"><strong data-ro="Adresă" data-en="Address">Adresă</strong>Strada Docenților 22, București</div>
+          <div class="f-contact-item"><strong>Email</strong><a href="mailto:office@gaalhairplay.ro">office@gaalhairplay.ro</a></div>
+          <div class="f-contact-item"><strong data-ro="Program" data-en="Hours">Program</strong><span data-ro="L–V: 10:00 – 18:00" data-en="Mon–Fri: 10:00 – 18:00">L–V: 10:00 – 18:00</span></div>
+        </div>
       </div>
     </div>
-    <div class="footer-copy">
-      <span data-ro="© 2025 Gaal Hairplay. Toate drepturile rezervate." data-en="© 2025 Gaal Hairplay. All rights reserved.">© 2025 Gaal Hairplay. Toate drepturile rezervate.</span>
-    </div>
-  </footer>
-  <div id="page-bar"></div>
-  <script src="static/js/bg.js" defer></script>
-  <script src="static/js/main.js" defer></script>
+  </div>
+  <div class="footer-bottom"><div class="container">© 2025 Gaal Hairplay. <span data-ro="Toate drepturile rezervate." data-en="All rights reserved.">Toate drepturile rezervate.</span></div></div>
+</footer>
+
+<a href="#" class="go-top"><i class="fas fa-chevron-up"></i></a>
+<script src="js/bg.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
