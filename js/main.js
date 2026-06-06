@@ -210,6 +210,53 @@ function initScrollAnim() {
 }
 
 /* ────────────────────────────────────────
+   CURSURI — RANDOM YOUTUBE PLAYLIST VIDEO
+─────────────────────────────────────────── */
+function initCursuriVideo() {
+  const container = document.querySelector('.cursuri-img');
+  if (!container) return;
+
+  const playlistId = 'PLo4zeGtSbGL8oZeQsD4QNKvAEx9o8CtHh';
+
+  const playerDiv = document.createElement('div');
+  playerDiv.id = 'yt-cursuri-player';
+  container.appendChild(playerDiv);
+
+  const tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  document.head.appendChild(tag);
+
+  window.onYouTubeIframeAPIReady = function() {
+    new YT.Player('yt-cursuri-player', {
+      playerVars: {
+        list:           playlistId,
+        listType:       'playlist',
+        autoplay:       1,
+        mute:           1,
+        controls:       0,
+        loop:           1,
+        disablekb:      1,
+        fs:             0,
+        modestbranding: 1,
+        rel:            0,
+        playsinline:    1,
+        iv_load_policy: 3
+      },
+      events: {
+        onReady: function(e) {
+          e.target.mute();
+          const playlist = e.target.getPlaylist();
+          if (playlist && playlist.length > 0) {
+            e.target.playVideoAt(Math.floor(Math.random() * playlist.length));
+          }
+          e.target.playVideo();
+        }
+      }
+    });
+  };
+}
+
+/* ────────────────────────────────────────
    GO TOP
 ─────────────────────────────────────────── */
 function initGoTop() {
@@ -232,4 +279,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initTyped();
   initScrollAnim();
   initGoTop();
+  initCursuriVideo();
 });
