@@ -257,6 +257,29 @@ function initCursuriVideo() {
 }
 
 /* ────────────────────────────────────────
+   LIGHTBOX
+─────────────────────────────────────────── */
+function initLightbox() {
+  const overlay = document.getElementById('lightbox');
+  if (!overlay) return;
+  const img   = overlay.querySelector('img');
+  const close = overlay.querySelector('.lightbox-close');
+
+  document.querySelectorAll('[data-lightbox]').forEach(el => {
+    el.addEventListener('click', () => {
+      img.src = el.dataset.lightbox;
+      img.alt = el.querySelector('img')?.alt || '';
+      overlay.classList.add('open');
+    });
+  });
+
+  const dismiss = () => overlay.classList.remove('open');
+  close.addEventListener('click', dismiss);
+  overlay.addEventListener('click', e => { if (e.target !== img) dismiss(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') dismiss(); });
+}
+
+/* ────────────────────────────────────────
    GO TOP
 ─────────────────────────────────────────── */
 function initGoTop() {
@@ -279,5 +302,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTyped();
   initScrollAnim();
   initGoTop();
+  initLightbox();
   initCursuriVideo();
 });
