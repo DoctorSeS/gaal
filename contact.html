@@ -76,8 +76,8 @@
       <div class="fade-up">
         <span class="section-label" data-ro="Programare" data-en="Booking">Programare</span>
         <h2 class="section-title" data-ro="Contactează-ne oricând" data-en="Reach us anytime">Contactează-ne oricând</h2>
-        <p class="about-text" data-ro="Nu folosim formulare de programare online. Preferăm să vorbim direct cu tine pentru a înțelege exact ce îți dorești. Sună-ne, scrie-ne pe WhatsApp sau trimite un email — răspundem rapid." data-en="We don't use online booking forms. We prefer to speak with you directly to understand exactly what you want. Call us, message us on WhatsApp or send an email — we respond quickly.">
-          Nu folosim formulare de programare online. Preferăm să vorbim direct cu tine pentru a înțelege exact ce îți dorești. Sună-ne, scrie-ne pe WhatsApp sau trimite un email — răspundem rapid.
+        <p class="about-text" data-ro="Completează formularul alăturat sau contactează-ne direct. Suntem disponibili telefonic pentru orice detalii." data-en="Fill in the form alongside or contact us directly. We're available by phone for any details.">
+          Completează formularul alăturat sau contactează-ne direct. Suntem disponibili telefonic pentru orice detalii.
         </p>
 
         <!-- Contact items -->
@@ -142,23 +142,88 @@
         </div>
       </div>
 
-      <!-- RIGHT: map -->
-      <div class="contact-map-wrap fade-up delay-2">
-        <iframe
-          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBVizdQeh3udy11xDc5Ao2YStR2gLc-rfc&amp;q=gaal%20hairplay&amp;maptype=roadmap&amp;zoom=15"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Gaal Hairplay — Strada Docenților 22, București"
-        ></iframe>
-        <div style="margin-top:20px;padding:20px;background:var(--black-mid);border:1px solid var(--gold-dim)">
-          <div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px" data-ro="Cum ajungi" data-en="Getting here">Cum ajungi</div>
-          <p style="font-size:13px;color:var(--cream-dim);line-height:1.7" data-ro="Salonul se află pe Strada Docenților 22, București. Mijloace de transport în comun disponibile în apropiere." data-en="The salon is located at Strada Docenților 22, Bucharest. Public transport available nearby.">
-            Salonul se află pe Strada Docenților 22, București. Mijloace de transport în comun disponibile în apropiere.
-          </p>
+      <!-- RIGHT: booking form -->
+      <div class="contact-form-wrap fade-up delay-2">
+        <div class="booking-form-card">
+          <div class="booking-success" id="booking-success">
+            <div class="booking-success-icon"><i class="fas fa-check"></i></div>
+            <div class="booking-success-title" data-ro="Mulțumim!" data-en="Thank you!">Mulțumim!</div>
+            <p class="booking-success-text" data-ro="Mesajul a fost trimis. Vă vom contacta telefonic în cel mai scurt timp." data-en="Your message has been sent. We will contact you by phone shortly.">Mesajul a fost trimis. Vă vom contacta telefonic în cel mai scurt timp.</p>
+          </div>
+          <form id="booking-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="7a48298d-119d-4a9c-8b7f-cd0cc11a265c">
+            <input type="hidden" name="subject" value="Programare nouă — Gaal Hairplay">
+            <div style="margin-bottom:28px">
+              <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px" data-ro="Programare" data-en="Booking">Programare</div>
+              <div style="font-family:var(--font-serif);font-size:1.45rem;color:var(--cream)" data-ro="Rezervă-ți locul" data-en="Reserve your spot">Rezervă-ți locul</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-name" data-ro="Nume și prenume *" data-en="Full name *">Nume și prenume *</label>
+              <input type="text" id="f-name" name="name" class="form-control" placeholder="Ion Popescu" autocomplete="name">
+              <div class="form-error-msg" id="err-name" data-ro="Câmp obligatoriu." data-en="Required field.">Câmp obligatoriu.</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-phone" data-ro="Număr de telefon *" data-en="Phone number *">Număr de telefon *</label>
+              <input type="tel" id="f-phone" name="phone" class="form-control" placeholder="07XX XXX XXX" autocomplete="tel">
+              <div class="form-error-msg" id="err-phone" data-ro="Introduceți un număr de telefon valid." data-en="Enter a valid phone number.">Introduceți un număr de telefon valid.</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-service" data-ro="Serviciu dorit *" data-en="Requested service *">Serviciu dorit *</label>
+              <select id="f-service" name="service" class="form-control">
+                <option value="">— Alege serviciul —</option>
+                <option value="Tuns">Tuns</option>
+                <option value="Coafat">Coafat</option>
+                <option value="Vopsit">Vopsit</option>
+                <option value="Balayage">Balayage</option>
+                <option value="Toner">Toner</option>
+                <option value="Permanent">Permanent</option>
+                <option value="Spălat">Spălat</option>
+                <option value="Extensii Crochet">Extensii Crochet</option>
+                <option value="Keratina">Keratina</option>
+                <option value="Nanoplastie">Nanoplastie</option>
+                <option value="Tratament Reconstrucție">Tratament Reconstrucție</option>
+                <option value="Frizerie">Frizerie</option>
+              </select>
+              <div class="form-error-msg" id="err-service" data-ro="Vă rugăm selectați un serviciu." data-en="Please select a service.">Vă rugăm selectați un serviciu.</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-message" data-ro="Descrie ce îți dorești *" data-en="Describe what you want *">Descrie ce îți dorești *</label>
+              <textarea id="f-message" name="message" class="form-control" placeholder="Ex: Vreau un balayage blond, în prezent am părul vopsit maro..."></textarea>
+              <div class="form-error-msg" id="err-message" data-ro="Vă rugăm descrieți ce doriți." data-en="Please describe what you want.">Vă rugăm descrieți ce doriți.</div>
+            </div>
+            <div class="form-group" id="photo-group" style="display:none">
+              <div class="photo-notice">
+                <i class="fas fa-info-circle"></i>
+                <span data-ro="Pentru serviciul selectat este obligatoriu să atașați poze cu părul dumneavoastră actual." data-en="For the selected service, photos of your current hair are required.">Pentru serviciul selectat este obligatoriu să atașați poze cu părul dumneavoastră actual.</span>
+              </div>
+              <label class="form-label" data-ro="Poze păr actual *" data-en="Current hair photos *">Poze păr actual *</label>
+              <label class="file-upload-label" for="f-photo">
+                <i class="fas fa-camera"></i>
+                <span id="file-upload-text" data-ro="Alege poze (multiple permise)" data-en="Choose photos (multiple allowed)">Alege poze (multiple permise)</span>
+              </label>
+              <input type="file" id="f-photo" accept="image/*" multiple class="file-input-hidden">
+              <div class="form-error-msg" id="err-photo" data-ro="Vă rugăm atașați cel puțin o poză." data-en="Please attach at least one photo.">Vă rugăm atașați cel puțin o poză.</div>
+            </div>
+            <button type="submit" id="booking-submit" class="btn btn-gold">
+              <span id="booking-submit-text" data-ro="Trimite cererea" data-en="Send request">Trimite cererea</span>
+              <span id="booking-submit-loading" style="display:none;opacity:0.6" data-ro="Se trimite…" data-en="Sending…">Se trimite…</span>
+            </button>
+            <div id="booking-net-error" style="display:none;font-size:12px;color:rgba(220,70,70,0.85);text-align:center;margin-top:12px" data-ro="Eroare la trimitere. Vă rugăm sunați-ne direct." data-en="Send error. Please call us directly.">Eroare la trimitere. Vă rugăm sunați-ne direct.</div>
+          </form>
         </div>
       </div>
 
+    </div>
+
+    <!-- MAP -->
+    <div class="contact-map-standalone fade-up">
+      <iframe
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBVizdQeh3udy11xDc5Ao2YStR2gLc-rfc&amp;q=gaal%20hairplay&amp;maptype=roadmap&amp;zoom=15"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Gaal Hairplay — Strada Docenților 22, București"
+      ></iframe>
     </div>
   </div>
 </section>
